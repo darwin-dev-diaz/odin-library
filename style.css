@@ -37,10 +37,115 @@ body{
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(16, 10rem);
+    grid-template-rows: repeat(16, 15rem);
 }
 
 .shelf-slot{
     border-bottom: var(--yellow) solid 15px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
 
+}
+
+.book{
+    width: 75%;
+    height: 90%;
+    background-color: #111C30;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.book-author{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.book-title{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.3rem;
+}
+.book-one{
+    background-color: var(--red);
+}
+.book-one>.book-title{
+    color: var(--white);
+}
+.book-one>.book-author{
+    background-color: var(--background);
+    color: var(--white);
+}
+
+.book-two{
+    background-color: var(--red);
+}
+.book-two>.book-title{
+    color: var(--yellow);
+}
+.book-two>.book-author{
+    background-color: var(--white);
+    color: var(--background);
+}
+
+
+.book-three{
+    background-color: var(--blue);
+}
+.book-three>.book-title{
+    color: var(--white);
+}
+.book-three>.book-author{
+    background-color: var(--blue);
+    color: var(--background);
+}
+
+.book-four{
+    background-color: var(--white);
+}
+.book-four>.book-title{
+    color: var(--background);
+}
+.book-four>.book-author{
+    background-color: var(--background);
+    color: var(--white);
+}
+.book-five{
+    background-color: var(--white);
+}
+.book-five>.book-title{
+    color: var(--yellow);
+}
+.book-five>.book-author{
+    background-color: var(--yellow);
+    color: var(--background);
+}
+.book-six{
+    background-color: var(--yellow);
+}
+.book-six>.book-title{
+    color: var(--white);
+}
+.book-six>.book-author{
+    background-color: var(--yellow);
+    color: var(--background);
+}
+
+.book-seven{
+    background-color: var(--blue);
+}
+.book-seven>.book-title{
+    color: var(--yellow);
+}
+.book-seven>.book-author{
+    background-color: var(--yellow);
+    color: var(--blue);
 }
