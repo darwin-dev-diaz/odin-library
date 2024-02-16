@@ -234,12 +234,18 @@ body {
 }
 
 .add-book-btn > svg {
+  transition: all 0.25s ease-out;
   fill: var(--white);
   stroke: var(--white);
   height: 75%;
 }
-
+.not-clicked{
+  transition: all 0.25s ease-out;
+  transform: rotate(90deg);
+  /* background-color: var(--red); */
+}
 .clicked {
+  transition: all 0.25s ease-out;
   transform: rotate(45deg);
   background-color: var(--red);
 }
