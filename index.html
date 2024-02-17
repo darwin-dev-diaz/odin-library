@@ -12,28 +12,8 @@
     <div class="header"></div>
     <div class="shelf-container">
       <div class="shelf">
-        <div class="shelf-slot">
-          <div class="book book-one">
-            <div class="book-title">TITLE OF BOOK</div>
-            <div class="book-author">Author of book</div>
-            <div class="cardPopUp">
-              <div class="pages">PAGES: 100</div>
-              <button class="read-btn not-read"></button
-              ><button class="delete-btn">DELETE</button>
-            </div>
-          </div>
-        </div>
-        <div class="shelf-slot">
-          <div class="book book-three">
-            <div class="book-title">TITLE OF BOOK</div>
-            <div class="book-author">Author of book</div>
-            <div class="cardPopUp">
-              <div class="pages">PAGES: 100</div>
-              <button class="read-btn not-read"></button
-              ><button class="delete-btn">DELETE</button>
-            </div>
-          </div>
-        </div>
+        <div class="shelf-slot"></div>
+        <div class="shelf-slot"></div>
         <div class="shelf-slot"></div>
         <div class="shelf-slot"></div>
         <div class="shelf-slot"></div>
@@ -84,12 +64,30 @@
       <div class="add-book-popup no-display">
         <h1>Add a new book</h1>
         <form class="add-book-form">
-          <input type="text" placeholder="Title" required id="title" maxlength="100">
-          <input type="text" placeholder="Author" required id="author" maxlength="100">
-          <input type="number" placeholder="Pages" required id="pages" maxlength="100">
+          <input
+            type="text"
+            placeholder="Title"
+            required
+            id="title"
+            maxlength="100"
+          />
+          <input
+            type="text"
+            placeholder="Author"
+            required
+            id="author"
+            maxlength="100"
+          />
+          <input
+            type="number"
+            placeholder="Pages"
+            required
+            id="pages"
+            maxlength="100"
+          />
           <div class="radio-container">
             <label for="read">Have you read it?</label>
-            <input type="checkbox" id="isRead">
+            <input type="checkbox" id="isRead" />
           </div>
           <button class="submit-button" type="submit">Add book</button>
         </form>
