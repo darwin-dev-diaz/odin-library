@@ -6,12 +6,12 @@ function toggleAddBook() {
   shelf.classList.toggle("no-display");
   addBookPopUp.classList.toggle("no-display");
 }
-// toggle add book screen
+///////////////TOGGLE ADD BOOK SCREEN///////////////
 addBookBtn.addEventListener("click", () => {
   toggleAddBook();
 });
 
-//wire add book pop up
+////////////////WIRE ADD BOOK FORM////////////////
 function isFormFilled(form) {
   const children = form.children;
   for (child of children) {
@@ -78,11 +78,22 @@ function addBookToLibrary(bookObj) {
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("delete-btn");
   deleteButton.textContent = `DELETE`;
+  
+  deleteButton.addEventListener('click',(event)=>{
+    let bookIndex = Array(...shelf.children).indexOf(event.target.parentElement.parentElement.parentElement);
+
+    library.splice(bookIndex,1);
+
+    let occupiedShelfSlots = document.querySelectorAll('.shelf-slot:not(:empty)');
+    occupiedShelfSlots.forEach((slot)=>slot.innerHTML = '');
+    library.forEach(book=>addBookToLibrary(book));
+
+    console.log({bookIndex, occupiedShelfSlots, library});
+  });
+  
   cardPopUp.appendChild(deleteButton);
 
   bookElement.appendChild(cardPopUp);
-
-  console.log(bookElement);
 
   let nextEmptyShelfSlot = document.querySelector(".shelf-slot:empty");
   nextEmptyShelfSlot.appendChild(bookElement);
@@ -113,3 +124,19 @@ submitButton.addEventListener("click", (event) => {
     formL.reset();
   }
 });
+
+///////////////WIRE DELETE BUTTON///////////////
+// const deleteButtons = document.querySelectorAll('.delete-btn');
+// deleteButtons.forEach(deleteButton=>{
+//   deleteButton.addEventListener('click',(event)=>{
+//     let bookIndex = Array(...shelf.children).indexOf(event.target.parentElement.parentElement.parentElement);
+
+//     library.splice(bookIndex,1);
+
+//     let occupiedShelfSlots = document.querySelectorAll('.shelf-slot:not(:empty)');
+//     occupiedShelfSlots.forEach((slot)=>slot.innerHTML = '');
+//     library.forEach(book=>addBookToLibrary(book));
+
+//     console.log({bookIndex, occupiedShelfSlots, library});
+//   });
+// });
