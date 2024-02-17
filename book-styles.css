@@ -1,0 +1,570 @@
+:root {
+    --background: #111c30;
+    --red: #bb5347;
+    --darker-red: #7f3830;
+    --lighter-red: #d97167;
+    --blue: #587a7d;
+    --darker-blue: #375259; /* darker shade */
+    --lighter-blue: #8daeb0; /* lighter shade */
+    --yellow: #d4a071;
+    --darker-yellow: #a87d58;
+    --lighter-yellow: #e5c7a5;
+    --white: #eedfcd;
+    --green: #537d61;
+    --darker-green: #385b41; /* darker shade */
+    --lighter-green: #8fc29e; /* lighter shade */
+    --grey: #929292;
+    --darker-grey: #656565; /* darker shade */
+    --lighter-grey: #bab9b9;
+    --hover-color: #73877a;
+  }
+
+  .book-one {
+    background-color: var(--red);
+  }
+  .book-one > .book-title {
+    color: var(--white);
+  }
+  .book-one > .book-author {
+    background-color: var(--background);
+    color: var(--white);
+  }
+  
+  .book-two {
+    background-color: var(--red);
+  }
+  .book-two > .book-title {
+    color: var(--yellow);
+  }
+  .book-two > .book-author {
+    background-color: var(--white);
+    color: var(--background);
+  }
+  
+  .book-three {
+    background-color: var(--blue);
+  }
+  .book-three > .book-title {
+    color: var(--white);
+  }
+  .book-three > .book-author {
+    background-color: var(--blue);
+    color: var(--background);
+  }
+  
+  .book-four {
+    background-color: var(--white);
+  }
+  .book-four > .book-title {
+    color: var(--background);
+  }
+  .book-four > .book-author {
+    background-color: var(--background);
+    color: var(--white);
+  }
+  
+  .book-five {
+    background-color: var(--white);
+  }
+  .book-five > .book-title {
+    color: var(--yellow);
+  }
+  .book-five > .book-author {
+    background-color: var(--yellow);
+    color: var(--background);
+  }
+  
+  .book-six {
+    background-color: var(--yellow);
+  }
+  .book-six > .book-title {
+    color: var(--white);
+  }
+  .book-six > .book-author {
+    background-color: var(--yellow);
+    color: var(--background);
+  }
+  
+  .book-seven {
+    background-color: var(--blue);
+  }
+  .book-seven > .book-title {
+    color: var(--yellow);
+  }
+  .book-seven > .book-author {
+    background-color: var(--yellow);
+    color: var(--blue);
+  }
+  
+  .book-eight {
+    background-color: var(--darker-red);
+  }
+  .book-eight > .book-title {
+    color: var(--lighter-grey);
+  }
+  .book-eight > .book-author {
+    background-color: var(--darker-red);
+    color: var(--lighter-grey);
+  }
+  
+  .book-nine {
+    background-color: var(--green);
+  }
+  .book-nine > .book-title {
+    color: var(--white);
+  }
+  .book-nine > .book-author {
+    background-color: var(--white);
+    color: var(--green);
+  }
+  
+  .book-ten {
+    background-color: var(--darker-grey);
+  }
+  .book-ten > .book-title {
+    color: var(--lighter-blue);
+  }
+  .book-ten > .book-author {
+    background-color: var(--lighter-blue);
+    color: var(--darker-grey);
+  }
+  
+  .book-eleven {
+    background-color: var(--darker-yellow);
+  }
+  .book-eleven > .book-title {
+    color: var(--background);
+  }
+  .book-eleven > .book-author {
+    background-color: var(--background);
+    color: var(--darker-yellow);
+  }
+  
+  .book-twelve {
+    background-color: var(--grey);
+  }
+  .book-twelve > .book-title {
+    color: var(--white);
+  }
+  .book-twelve > .book-author {
+    background-color: var(--white);
+    color: var(--grey);
+  }
+  
+  .book-thirteen {
+    background-color: var(--lighter-yellow);
+  }
+  .book-thirteen > .book-title {
+    color: var(--darker-red);
+  }
+  .book-thirteen > .book-author {
+    background-color: var(--darker-red);
+    color: var(--lighter-yellow);
+  }
+  
+  .book-fourteen {
+    background-color: var(--lighter-green);
+  }
+  .book-fourteen > .book-title {
+    color: var(--darker-blue);
+  }
+  .book-fourteen > .book-author {
+    background-color: var(--darker-blue);
+    color: var(--lighter-green);
+  }
+  
+  .book-fifteen {
+    background-color: var(--blue);
+  }
+  .book-fifteen > .book-title {
+    color: var(--white);
+  }
+  .book-fifteen > .book-author {
+    background-color: var(--white);
+    color: var(--blue);
+  }
+  
+  .book-sixteen {
+    background-color: var(--darker-green);
+  }
+  .book-sixteen > .book-title {
+    color: var(--lighter-yellow);
+  }
+  .book-sixteen > .book-author {
+    background-color: var(--lighter-yellow);
+    color: var(--darker-green);
+  }
+  
+  .book-seventeen {
+    background-color: var(--yellow);
+  }
+  .book-seventeen > .book-title {
+    color: var(--background);
+  }
+  .book-seventeen > .book-author {
+    background-color: var(--background);
+    color: var(--yellow);
+  }
+  
+  .book-eighteen {
+    background-color: var(--lighter-blue);
+  }
+  .book-eighteen > .book-title {
+    color: var(--darker-red);
+  }
+  .book-eighteen > .book-author {
+    background-color: var(--darker-red);
+    color: var(--lighter-blue);
+  }
+  
+  .book-nineteen {
+    background-color: var(--green);
+  }
+  .book-nineteen > .book-title {
+    color: var(--white);
+  }
+  .book-nineteen > .book-author {
+    background-color: var(--white);
+    color: var(--green);
+  }
+  
+  .book-twenty {
+    background-color: var(--darker-grey);
+  }
+  .book-twenty > .book-title {
+    color: var(--lighter-blue);
+  }
+  .book-twenty > .book-author {
+    background-color: var(--lighter-blue);
+    color: var(--darker-grey);
+  }
+  .book-twenty-one {
+    background-color: var(--lighter-yellow);
+  }
+  .book-twenty-one > .book-title {
+    color: var(--darker-red);
+  }
+  .book-twenty-one > .book-author {
+    background-color: var(--darker-red);
+    color: var(--lighter-yellow);
+  }
+  
+  .book-twenty-two {
+    background-color: var(--darker-green);
+  }
+  .book-twenty-two > .book-title {
+    color: var(--lighter-blue);
+  }
+  .book-twenty-two > .book-author {
+    background-color: var(--lighter-blue);
+    color: var(--darker-green);
+  }
+  
+  .book-twenty-three {
+    background-color: var(--yellow);
+  }
+  .book-twenty-three > .book-title {
+    color: var(--background);
+  }
+  .book-twenty-three > .book-author {
+    background-color: var(--background);
+    color: var(--yellow);
+  }
+  
+  .book-twenty-four {
+    background-color: var(--lighter-blue);
+  }
+  .book-twenty-four > .book-title {
+    color: var(--darker-red);
+  }
+  .book-twenty-four > .book-author {
+    background-color: var(--darker-red);
+    color: var(--lighter-blue);
+  }
+  
+  .book-twenty-five {
+    background-color: var(--green);
+  }
+  .book-twenty-five > .book-title {
+    color: var(--white);
+  }
+  .book-twenty-five > .book-author {
+    background-color: var(--white);
+    color: var(--green);
+  }
+  
+  .book-twenty-six {
+    background-color: var(--darker-grey);
+  }
+  .book-twenty-six > .book-title {
+    color: var(--lighter-blue);
+  }
+  .book-twenty-six > .book-author {
+    background-color: var(--lighter-blue);
+    color: var(--darker-grey);
+  }
+  
+  .book-twenty-seven {
+    background-color: var(--red);
+  }
+  .book-twenty-seven > .book-title {
+    color: var(--white);
+  }
+  .book-twenty-seven > .book-author {
+    background-color: var(--white);
+    color: var(--red);
+  }
+  
+  .book-twenty-eight {
+    background-color: var(--darker-green);
+  }
+  .book-twenty-eight > .book-title {
+    color: var(--lighter-yellow);
+  }
+  .book-twenty-eight > .book-author {
+    background-color: var(--lighter-yellow);
+    color: var(--darker-green);
+  }
+  
+  .book-twenty-nine {
+    background-color: var(--grey);
+  }
+  .book-twenty-nine > .book-title {
+    color: var(--white);
+  }
+  .book-twenty-nine > .book-author {
+    background-color: var(--white);
+    color: var(--grey);
+  }
+  
+  .book-thirty {
+    background-color: var(--darker-blue);
+  }
+  .book-thirty > .book-title {
+    color: var(--lighter-red);
+  }
+  .book-thirty > .book-author {
+    background-color: var(--lighter-red);
+    color: var(--darker-blue);
+  }
+  
+  .book-thirty-one {
+    background-color: var(--blue);
+  }
+  .book-thirty-one > .book-title {
+    color: var(--white);
+  }
+  .book-thirty-one > .book-author {
+    background-color: var(--white);
+    color: var(--blue);
+  }
+  
+  .book-thirty-two {
+    background-color: var(--darker-red);
+  }
+  .book-thirty-two > .book-title {
+    color: var(--lighter-grey);
+  }
+  .book-thirty-two > .book-author {
+    background-color: var(--lighter-grey);
+    color: var(--darker-red);
+  }
+  
+  .book-thirty-three {
+    background-color: var(--lighter-green);
+  }
+  .book-thirty-three > .book-title {
+    color: var(--darker-blue);
+  }
+  .book-thirty-three > .book-author {
+    background-color: var(--darker-blue);
+    color: var(--lighter-green);
+  }
+  
+  .book-thirty-four {
+    background-color: var(--yellow);
+  }
+  .book-thirty-four > .book-title {
+    color: var(--background);
+  }
+  .book-thirty-four > .book-author {
+    background-color: var(--background);
+    color: var(--yellow);
+  }
+  
+  .book-thirty-five {
+    background-color: var(--lighter-blue);
+  }
+  .book-thirty-five > .book-title {
+    color: var(--darker-red);
+  }
+  .book-thirty-five > .book-author {
+    background-color: var(--darker-red);
+    color: var(--lighter-blue);
+  }
+  
+  .book-thirty-six {
+    background-color: var(--green);
+  }
+  .book-thirty-six > .book-title {
+    color: var(--white);
+  }
+  .book-thirty-six > .book-author {
+    background-color: var(--white);
+    color: var(--green);
+  }
+  
+  .book-thirty-seven {
+    background-color: var(--darker-grey);
+  }
+  .book-thirty-seven > .book-title {
+    color: var(--lighter-blue);
+  }
+  .book-thirty-seven > .book-author {
+    background-color: var(--lighter-blue);
+    color: var(--darker-grey);
+  }
+  
+  .book-thirty-eight {
+    background-color: var(--red);
+  }
+  .book-thirty-eight > .book-title {
+    color: var(--white);
+  }
+  .book-thirty-eight > .book-author {
+    background-color: var(--white);
+    color: var(--red);
+  }
+  
+  .book-thirty-nine {
+    background-color: var(--darker-green);
+  }
+  .book-thirty-nine > .book-title {
+    color: var(--lighter-yellow);
+  }
+  .book-thirty-nine > .book-author {
+    background-color: var(--lighter-yellow);
+    color: var(--darker-green);
+  }
+  
+  .book-forty {
+    background-color: var(--grey);
+  }
+  .book-forty > .book-title {
+    color: var(--white);
+  }
+  .book-forty > .book-author {
+    background-color: var(--white);
+    color: var(--grey);
+  }
+  
+  .book-forty-one {
+    background-color: var(--darker-red);
+  }
+  .book-forty-one > .book-title {
+    color: var(--lighter-grey);
+  }
+  .book-forty-one > .book-author {
+    background-color: var(--lighter-grey);
+    color: var(--darker-red);
+  }
+  
+  .book-forty-two {
+    background-color: var(--lighter-green);
+  }
+  .book-forty-two > .book-title {
+    color: var(--darker-blue);
+  }
+  .book-forty-two > .book-author {
+    background-color: var(--darker-blue);
+    color: var(--lighter-green);
+  }
+  
+  .book-forty-three {
+    background-color: var(--yellow);
+  }
+  .book-forty-three > .book-title {
+    color: var(--background);
+  }
+  .book-forty-three > .book-author {
+    background-color: var(--background);
+    color: var(--yellow);
+  }
+  
+  .book-forty-four {
+    background-color: var(--lighter-blue);
+  }
+  .book-forty-four > .book-title {
+    color: var(--darker-red);
+  }
+  .book-forty-four > .book-author {
+    background-color: var(--darker-red);
+    color: var(--lighter-blue);
+  }
+  
+  .book-forty-five {
+    background-color: var(--green);
+  }
+  .book-forty-five > .book-title {
+    color: var(--white);
+  }
+  .book-forty-five > .book-author {
+    background-color: var(--white);
+    color: var(--green);
+  }
+  
+  .book-forty-six {
+    background-color: var(--darker-grey);
+  }
+  .book-forty-six > .book-title {
+    color: var(--lighter-blue);
+  }
+  .book-forty-six > .book-author {
+    background-color: var(--lighter-blue);
+    color: var(--darker-grey);
+  }
+  
+  .book-forty-seven {
+    background-color: var(--red);
+  }
+  .book-forty-seven > .book-title {
+    color: var(--white);
+  }
+  .book-forty-seven > .book-author {
+    background-color: var(--white);
+    color: var(--red);
+  }
+  
+  .book-forty-eight {
+    background-color: var(--darker-green);
+  }
+  .book-forty-eight > .book-title {
+    color: var(--lighter-yellow);
+  }
+  .book-forty-eight > .book-author {
+    background-color: var(--lighter-yellow);
+    color: var(--darker-green);
+  }
+  
+  .book-forty-nine {
+    background-color: var(--grey);
+  }
+  .book-forty-nine > .book-title {
+    color: var(--white);
+  }
+  .book-forty-nine > .book-author {
+    background-color: var(--white);
+    color: var(--grey);
+  }
+  
+  .book-fifty {
+    background-color: var(--darker-red);
+  }
+  .book-fifty > .book-title {
+    color: var(--lighter-grey);
+  }
+  .book-fifty > .book-author {
+    background-color: var(--lighter-grey);
+    color: var(--darker-red);
+  }
+      

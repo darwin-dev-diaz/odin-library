@@ -23,27 +23,78 @@ function isFormFilled(form) {
 }
 
 function Book(title, author, pageNum, isRead) {
-  const bookClassList = [
-    "book-one",
-    "book-two",
-    "book-three",
-    "book-four",
-    "book-five",
-    "book-six",
-    "book-seven",
+  const bookClassList = [];
+
+  const numbers = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
+    "twenty",
+    "twenty-one",
+    "twenty-two",
+    "twenty-three",
+    "twenty-four",
+    "twenty-five",
+    "twenty-six",
+    "twenty-seven",
+    "twenty-eight",
+    "twenty-nine",
+    "thirty",
+    "thirty-one",
+    "thirty-two",
+    "thirty-three",
+    "thirty-four",
+    "thirty-five",
+    "thirty-six",
+    "thirty-seven",
+    "thirty-eight",
+    "thirty-nine",
+    "forty",
+    "forty-one",
+    "forty-two",
+    "forty-three",
+    "forty-four",
+    "forty-five",
+    "forty-six",
+    "forty-seven",
+    "forty-eight",
+    "forty-nine",
+    "fifty",
   ];
+
+  for (let i = 0; i < numbers.length; i++) {
+    bookClassList.push(`book-${numbers[i]}`);
+  }
+
   this.title = title;
   this.author = author;
   this.pageNum = pageNum;
   this.isRead = isRead;
-  this.color = bookClassList[Math.floor(Math.random() * 7)];
+  this.color = bookClassList[Math.floor(Math.random() * bookClassList.length)];
 }
 
 const library = [
   new Book("The Great Gatsby", "F. Scott Fitzgerald", 180, true),
   new Book("To Kill a Mockingbird", "Harper Lee", 281, false),
   new Book("1984", "George Orwell", 328, true),
-  new Book("The Catcher in the Rye", "J.D. Salinger", 214, false)
+  new Book("Moby-Dick", "Herman Melville", 624, true),
+  new Book("War and Peace", "Leo Tolstoy", 1392, false),
 ];
 
 function addBookToLibrary(bookObj) {
@@ -73,24 +124,31 @@ function addBookToLibrary(bookObj) {
   const readButton = document.createElement("button");
   const readStatus = bookObj.isRead ? "read" : "not-read";
   readButton.classList.add("read-btn", readStatus);
+  readButton.addEventListener('click',(event)=>{
+    readButton.classList.toggle('read');
+    readButton.classList.toggle('not-read');
+  });
   cardPopUp.appendChild(readButton);
 
   const deleteButton = document.createElement("button");
   deleteButton.classList.add("delete-btn");
   deleteButton.textContent = `DELETE`;
-  
-  deleteButton.addEventListener('click',(event)=>{
-    let bookIndex = Array(...shelf.children).indexOf(event.target.parentElement.parentElement.parentElement);
+  deleteButton.addEventListener("click", (event) => {
+    let bookIndex = Array(...shelf.children).indexOf(
+      event.target.parentElement.parentElement.parentElement
+    );
 
-    library.splice(bookIndex,1);
+    library.splice(bookIndex, 1);
 
-    let occupiedShelfSlots = document.querySelectorAll('.shelf-slot:not(:empty)');
-    occupiedShelfSlots.forEach((slot)=>slot.innerHTML = '');
-    library.forEach(book=>addBookToLibrary(book));
+    let occupiedShelfSlots = document.querySelectorAll(
+      ".shelf-slot:not(:empty)"
+    );
+    occupiedShelfSlots.forEach((slot) => (slot.innerHTML = ""));
+    library.forEach((book) => addBookToLibrary(book));
 
-    console.log({bookIndex, occupiedShelfSlots, library});
+    console.log({ bookIndex, occupiedShelfSlots, library });
   });
-  
+
   cardPopUp.appendChild(deleteButton);
 
   bookElement.appendChild(cardPopUp);
@@ -115,28 +173,14 @@ submitButton.addEventListener("click", (event) => {
       document.querySelector("#pages").value,
       document.querySelector("#isRead").value === "on" ? true : false
     );
-    
-    const occupiedShelfSlots = document.querySelectorAll('.shelf-slot:not(:empty)');
-    occupiedShelfSlots.forEach((slot)=>slot.innerHTML = '');
-    
+
+    const occupiedShelfSlots = document.querySelectorAll(
+      ".shelf-slot:not(:empty)"
+    );
+    occupiedShelfSlots.forEach((slot) => (slot.innerHTML = ""));
+
     library.push(bookObj);
-    library.forEach(book=>addBookToLibrary(book));
+    library.forEach((book) => addBookToLibrary(book));
     formL.reset();
   }
 });
-
-///////////////WIRE DELETE BUTTON///////////////
-// const deleteButtons = document.querySelectorAll('.delete-btn');
-// deleteButtons.forEach(deleteButton=>{
-//   deleteButton.addEventListener('click',(event)=>{
-//     let bookIndex = Array(...shelf.children).indexOf(event.target.parentElement.parentElement.parentElement);
-
-//     library.splice(bookIndex,1);
-
-//     let occupiedShelfSlots = document.querySelectorAll('.shelf-slot:not(:empty)');
-//     occupiedShelfSlots.forEach((slot)=>slot.innerHTML = '');
-//     library.forEach(book=>addBookToLibrary(book));
-
-//     console.log({bookIndex, occupiedShelfSlots, library});
-//   });
-// });
