@@ -22,6 +22,71 @@ function isFormFilled(form) {
   return true;
 }
 
+class Book1 {
+  static numbers = [
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
+    "twenty",
+    "twenty-one",
+    "twenty-two",
+    "twenty-three",
+    "twenty-four",
+    "twenty-five",
+    "twenty-six",
+    "twenty-seven",
+    "twenty-eight",
+    "twenty-nine",
+    "thirty",
+    "thirty-one",
+    "thirty-two",
+    "thirty-three",
+    "thirty-four",
+    "thirty-five",
+    "thirty-six",
+    "thirty-seven",
+    "thirty-eight",
+    "thirty-nine",
+    "forty",
+    "forty-one",
+    "forty-two",
+    "forty-three",
+    "forty-four",
+    "forty-five",
+    "forty-six",
+    "forty-seven",
+    "forty-eight",
+    "forty-nine",
+    "fifty",
+  ];
+  constructor(title, author, pageNum, isRead) {
+    this.title = title;
+    this.author = author;
+    this.pageNum = pageNum;
+    this.isRead = isRead;
+    this.color = `book-${Book1.numbers[Math.floor(Math.random() * Book1.numbers.length)]}`
+  }
+}
+
+const test = new Book1('test','test',1,true);
+console.log(test.color);
+
 function Book(title, author, pageNum, isRead) {
   const bookClassList = [];
 
@@ -124,9 +189,9 @@ function addBookToLibrary(bookObj) {
   const readButton = document.createElement("button");
   const readStatus = bookObj.isRead ? "read" : "not-read";
   readButton.classList.add("read-btn", readStatus);
-  readButton.addEventListener('click',(event)=>{
-    readButton.classList.toggle('read');
-    readButton.classList.toggle('not-read');
+  readButton.addEventListener("click", (event) => {
+    readButton.classList.toggle("read");
+    readButton.classList.toggle("not-read");
   });
   cardPopUp.appendChild(readButton);
 
@@ -145,8 +210,6 @@ function addBookToLibrary(bookObj) {
     );
     occupiedShelfSlots.forEach((slot) => (slot.innerHTML = ""));
     library.forEach((book) => addBookToLibrary(book));
-
-    console.log({ bookIndex, occupiedShelfSlots, library });
   });
 
   cardPopUp.appendChild(deleteButton);

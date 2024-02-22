@@ -7,7 +7,7 @@
     --darker-blue: #375259; /* darker shade */
     --lighter-blue: #8daeb0; /* lighter shade */
     --yellow: #d4a071;
-    --darker-yellow: #a87d58;
+    --lighter-darker-yellow: #cf996b;
     --lighter-yellow: #e5c7a5;
     --white: #eedfcd;
     --green: #537d61;
@@ -130,14 +130,14 @@
   }
   
   .book-eleven {
-    background-color: var(--darker-yellow);
+    background-color: var(--lighter-darker-yellow);
   }
   .book-eleven > .book-title {
     color: var(--background);
   }
   .book-eleven > .book-author {
     background-color: var(--background);
-    color: var(--darker-yellow);
+    color: var(--lighter-darker-yellow);
   }
   
   .book-twelve {
