@@ -22,7 +22,7 @@ function isFormFilled(form) {
   return true;
 }
 
-class Book1 {
+class Book {
   static numbers = [
     "one",
     "two",
@@ -80,79 +80,11 @@ class Book1 {
     this.author = author;
     this.pageNum = pageNum;
     this.isRead = isRead;
-    this.color = `book-${Book1.numbers[Math.floor(Math.random() * Book1.numbers.length)]}`
+    this.color = `book-${Book.numbers[Math.floor(Math.random() * Book.numbers.length)]}`
   }
 }
 
-const test = new Book1('test','test',1,true);
-console.log(test.color);
 
-function Book(title, author, pageNum, isRead) {
-  const bookClassList = [];
-
-  const numbers = [
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine",
-    "ten",
-    "eleven",
-    "twelve",
-    "thirteen",
-    "fourteen",
-    "fifteen",
-    "sixteen",
-    "seventeen",
-    "eighteen",
-    "nineteen",
-    "twenty",
-    "twenty-one",
-    "twenty-two",
-    "twenty-three",
-    "twenty-four",
-    "twenty-five",
-    "twenty-six",
-    "twenty-seven",
-    "twenty-eight",
-    "twenty-nine",
-    "thirty",
-    "thirty-one",
-    "thirty-two",
-    "thirty-three",
-    "thirty-four",
-    "thirty-five",
-    "thirty-six",
-    "thirty-seven",
-    "thirty-eight",
-    "thirty-nine",
-    "forty",
-    "forty-one",
-    "forty-two",
-    "forty-three",
-    "forty-four",
-    "forty-five",
-    "forty-six",
-    "forty-seven",
-    "forty-eight",
-    "forty-nine",
-    "fifty",
-  ];
-
-  for (let i = 0; i < numbers.length; i++) {
-    bookClassList.push(`book-${numbers[i]}`);
-  }
-
-  this.title = title;
-  this.author = author;
-  this.pageNum = pageNum;
-  this.isRead = isRead;
-  this.color = bookClassList[Math.floor(Math.random() * bookClassList.length)];
-}
 
 const library = [
   new Book("The Great Gatsby", "F. Scott Fitzgerald", 180, true),
