@@ -71,8 +71,10 @@
               placeholder="Title"
               required
               id="title"
+              minlength="4"
               maxlength="100"
             />
+            <span class="error"></span>
           </label>
           <label for="author">
             <input
@@ -81,8 +83,10 @@
               name="author"
               required
               id="author"
+              minlength="5"
               maxlength="100"
             />
+            <span class="error"></span>
           </label>
 
           <label for="pages">
@@ -92,13 +96,14 @@
               required
               name="pages"
               id="pages"
-              maxlength="100"
+              min="1"
             />
+            <span class="error"></span>
           </label>
-          <label for="isRead" class="radio-container">
-            Have you read it?
-            <input type="checkbox" id="isRead" name="isRead"/>
-          </label>
+          <div class="radio-container">
+            <label for="read">Have you read it?</label>
+            <input type="checkbox" id="isRead" />
+          </div>
           <button class="submit-button" type="submit">Add book</button>
         </form>
       </div>

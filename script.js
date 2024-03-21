@@ -1,6 +1,5 @@
 // alright. the goal now it to validate the form using only js and the the constraint validation API
 
-
 const addBookBtn = document.querySelector(".add-book-btn");
 const shelf = document.querySelector(".shelf");
 const addBookPopUp = document.querySelector(".add-book-popup");
@@ -15,15 +14,15 @@ addBookBtn.addEventListener("click", () => {
 });
 
 ////////////////WIRE ADD BOOK FORM////////////////
-function isFormFilled(form) {
-  const children = form.children;
-  for (child of children) {
-    if (child.hasAttribute("required") && child.value === "") {
-      return false;
-    }
-  }
-  return true;
-}
+// function isFormFilled(form) {
+//   const children = form.children;
+//   for (child of children) {
+//     if (child.hasAttribute("required") && child.value === "") {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
 class Book {
   static numbers = [
@@ -83,11 +82,11 @@ class Book {
     this.author = author;
     this.pageNum = pageNum;
     this.isRead = isRead;
-    this.color = `book-${Book.numbers[Math.floor(Math.random() * Book.numbers.length)]}`
+    this.color = `book-${
+      Book.numbers[Math.floor(Math.random() * Book.numbers.length)]
+    }`;
   }
 }
-
-
 
 const library = [
   new Book("The Great Gatsby", "F. Scott Fitzgerald", 180, true),
@@ -159,12 +158,42 @@ library.forEach((bookObj) => {
   addBookToLibrary(bookObj);
 });
 
-const submitButton = document.querySelector(".submit-button");
-submitButton.addEventListener("click", (event) => {
-  const formL = document.querySelector("form");
-  if (isFormFilled(formL)) {
-    toggleAddBook();
+const firstThreeInputs = Array.from(document.querySelectorAll("input")).slice(
+  0,
+  3
+);
+
+firstThreeInputs.forEach((input, i) => {
+  input.addEventListener("input", (event) => {
+    const errorBox = document.querySelectorAll(".error")[i];
+    if (input.validity.valid) {
+      errorBox.textContent = "";
+      errorBox.className = "error";
+    } else {
+      showError(input, errorBox);
+    }
+  });
+});
+
+function isEveryInputValid(array, testFunction) {
+  let returnResult = true;
+  array.forEach((input, i) => {
+    if (!testFunction(input)) {
+      const errorBox = document.querySelectorAll(".error")[i];
+      showError(input, errorBox);
+      returnResult = false;
+    }
+  });
+
+  return returnResult;
+}
+const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+  if (!isEveryInputValid(firstThreeInputs, (input) => input.validity.valid)) {
     event.preventDefault();
+  } else {
+    event.preventDefault();
+    toggleAddBook();
     let bookObj = new Book(
       document.querySelector("#title").value,
       document.querySelector("#author").value,
@@ -179,6 +208,18 @@ submitButton.addEventListener("click", (event) => {
 
     library.push(bookObj);
     library.forEach((book) => addBookToLibrary(book));
-    formL.reset();
+    form.reset();
   }
 });
+
+function showError(input, errorBox) {
+  if (input.validity.valueMissing) {
+    errorBox.textContent = "Field cannot be blank.";
+  } else if (input.validity.tooShort) {
+    errorBox.textContent = `Text should be at least ${input.minLength} characters. You entered ${input.value.length} characters.`;
+  } else if (input.validity.rangeUnderflow) {
+    errorBox.textContent = `Min value is 1`;
+  }
+
+  errorBox.classList = "error error--active";
+}
