@@ -213,13 +213,17 @@ form.addEventListener("submit", (event) => {
 });
 
 function showError(input, errorBox) {
-  if (input.validity.valueMissing) {
+  if (
+    (input.validity.valueMissing && input.value === "e") ||
+    input.value === "E"
+  ) {
+    errorBox.textContent = `Cannot enter e!`;
+  } else if (input.validity.valueMissing) {
     errorBox.textContent = "Field cannot be blank.";
   } else if (input.validity.tooShort) {
     errorBox.textContent = `Text should be at least ${input.minLength} characters. You entered ${input.value.length} characters.`;
   } else if (input.validity.rangeUnderflow) {
     errorBox.textContent = `Min value is 1`;
   }
-
   errorBox.classList = "error error--active";
 }
