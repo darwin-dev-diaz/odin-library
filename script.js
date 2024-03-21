@@ -1,3 +1,6 @@
+// alright. the goal now it to validate the form using only js and the the constraint validation API
+
+
 const addBookBtn = document.querySelector(".add-book-btn");
 const shelf = document.querySelector(".shelf");
 const addBookPopUp = document.querySelector(".add-book-popup");
